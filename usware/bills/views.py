@@ -54,7 +54,7 @@ def userform(request):
 			form = UserForm(request.POST)
 			if form.is_valid():
 				newuser = form.save(commit=False)
-				newuser.password = settings.PASSWORD
+				newuser.set_password(settings.PASSWORD)
 				form.save()
 				return HttpResponseRedirect('/bills/')
 		else:

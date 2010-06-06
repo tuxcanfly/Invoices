@@ -95,5 +95,5 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 )
 
-PASSWORD = 'sha1$5c25f$9e4ec76dc3e4979e88c3677ff14e4fda1ceb05bf'
+PASSWORD = 'usware123'
     #Default password for new users: usware123
