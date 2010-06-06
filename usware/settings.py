@@ -11,8 +11,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '/home/tuxcanfly/Work/usware/bills.db', # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -58,7 +58,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '8h6$te#arsnjo7-4$9vsr98=+=@nib%3gfp*k2()l*z!!ccj8n'
+SECRET_KEY = 'z6j-(z2#43#@mb^up92bgi(^igu2g_&yv!-)c6d!+$cqk@2w!x'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -81,6 +81,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+	'/home/tuxcanfly/Work/usware/html'
 )
 
 INSTALLED_APPS = (
@@ -89,6 +90,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'bills',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
 )
+
+PASSWORD = 'sha1$5c25f$9e4ec76dc3e4979e88c3677ff14e4fda1ceb05bf'
+    #Default password for new users: usware123

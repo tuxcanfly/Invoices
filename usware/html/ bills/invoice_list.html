@@ -1,0 +1,15 @@
+if {% invoice_list %}
+	<ul>
+	{% for invoice in invoice_list %}
+		<li> 
+			<a href="/bills/invoice/{{invoice.id}}">{{invoice.id}}</a>
+			<p>{{invoice.description}}</p>
+			<p>{{invoice.date}}</p>
+			<p>{{invoice.amount}}</p>
+			<p>{{invoice.user.username}}</p>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No invoices</p>
+{% endif %}

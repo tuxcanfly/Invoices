@@ -1,0 +1,24 @@
+{% extends "header.html" %}
+
+{% block header %}
+	<h1>Welcome {{username}}</h1>
+{% endblock %}
+
+{% block content %}
+	{% if error %}
+		<p style='color:red'>{{error}}</p>
+	{% endif %}
+
+	{% if invoice %}	
+		<br />
+		<h4>
+			<a href="/bills/"> << Back to all</a>
+		</h4>
+		<br />
+		<h3>Invoice #{{invoice.id}}</h3>
+		<p><b>Details: </b>{{invoice.description}}</p>
+		<p><b>Date Purchased: </b>{{invoice.date|date}}</p>
+		<p><b>Amount: </b>Rs {{invoice.amount}}/-</p>
+		<p><b>Client: </b>{{invoice.user.username}}</p>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+
+{% block header %}
+	<h1>Welcome {{username}}</h1>
+{% endblock %}
+
+{% block content %}
+	<a href="/bills/new/">Create new invoice</a>
+	<a href="/bills/client/new/">Create new client</a>
+	{% if invoice_list %}
+		<ul>
+		{% for invoice in invoice_list %}
+			<li> 
+				<a href="/bills/view/{{invoice.id}}">{{invoice.id}}</a>
+				<p>{{invoice.description}}
+			</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<h4>You don't have any invoices yet.</h4>
+	{% endif %}
+{% endblock %}

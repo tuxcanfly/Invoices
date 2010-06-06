@@ -1,0 +1,6 @@
+<form action="/bills/client/new/" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<h5 style='color:orangeRed'>Default password is: usware123</h5>
+	<input type="submit" value="Create" />
+</form>
