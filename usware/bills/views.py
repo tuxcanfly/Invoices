@@ -1,7 +1,7 @@
 # Create your views here.
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.views import login, logout
-from usware.bills.models import Invoice, InvoiceForm, UserForm
+from bills.models import Invoice, InvoiceForm, UserForm
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.conf import settings
