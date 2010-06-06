@@ -21,3 +21,7 @@ Another way to test that 1 + 1 is equal to 2.
 True
 """}
 
+class ResponseTest(TestCase):
+	def test_bills(self):
+		response = self.client.get('/bills/')
+		self.failUnlessEqual(response.status_code, 200)
