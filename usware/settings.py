@@ -97,3 +97,5 @@ INSTALLED_APPS = (
 
 PASSWORD = 'usware123'
     #Default password for new users: usware123
+
+LOGIN_URL = '/bills/login/'
