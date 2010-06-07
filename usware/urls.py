@@ -13,10 +13,10 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
      (r'^admin/', include(admin.site.urls)),
-     (r'^bills/$', 'usware.bills.views.dashboard'),
+     (r'^bills/$', 'bills.views.dashboard'),
      (r'^bills/login/', 'django.contrib.auth.views.login'),
-     (r'^bills/logout/', 'usware.bills.views.userlogout'),
-     (r'^bills/view/(?P<id>\d+)/$', 'usware.bills.views.showinvoice'),
-     (r'^bills/new/', 'usware.bills.views.invoiceform'),
-     (r'^bills/client/new/', 'usware.bills.views.userform'),
+     (r'^bills/logout/', 'bills.views.userlogout'),
+     (r'^bills/view/(?P<id>\d+)/$', 'bills.views.showinvoice'),
+     (r'^bills/new/', 'bills.views.invoiceform'),
+     (r'^bills/client/new/', 'bills.views.userform'),
 )
